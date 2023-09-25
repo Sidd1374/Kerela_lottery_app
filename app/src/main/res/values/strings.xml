@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Kerala Lottery</string>
+    <string name="fullName">Full Name</string>
+    <string name="mobileNumber">Mobile Number</string>
+    <string name="emailAddress">Email Address</string>
+    <string name="login">Login</string>
+    <string name="signUp">Sign Up</string>
+    <string name="text1">Don\'t have an Account?  <b><u>Sign In</u></b></string>
+    <string name="note">Note*</string>
+    <string name="noteText">Do Not Share Your Lottery with anyone, Beware of fake lottery apps and websites
+that claim to be us. We do not have any website and we do not offer prize guarantees
+or any other special offers. Only purchase lottery tickets from your trusted agents.</string>
+    <string name="already_have_an_account_login">Already have an Account? <u><b>Login</b></u></string>
+    <string name="my_profile">My Profile</string>
+    <string name="home">Home</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="getOtp">Get Otp</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="confirm_your_password">Confirm your Password</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
