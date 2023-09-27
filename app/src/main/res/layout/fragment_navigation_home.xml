@@ -1,15 +1,259 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".navigation_home">
+    tools:context=".MainActivity">
 
-    <ListView
-        android:id="@+id/lotteryListView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <!--      Line-1-->
+        <TextView
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/line"
+            android:layout_marginTop="20dp"/>
+        <!--      Price-1-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_10"
+            android:layout_gravity="center"
+            android:textSize="40sp"
+            android:paddingTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <!-- ImageView 1 -->
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/rupees_10"
+            android:layout_margin="20dp"/>
+
+        <!-- Spinner 1 -->
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginVertical="10dp"
+            android:padding="20dp"
+            />
+
+        <!-- Button 1 -->
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_to_cart"
+            android:backgroundTint="@color/yellow"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginHorizontal="60dp"/>
+
+        <!--      Line-2-->
+        <TextView
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/line"
+            android:layout_marginTop="20dp"/>
+        <!--      Price-2-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_50"
+            android:layout_gravity="center"
+            android:textSize="40sp"
+            android:paddingTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <!-- ImageView 2 -->
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="20dp"
+            android:src="@drawable/rupees_50"/>
+
+        <!-- Spinner 2 -->
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginVertical="10dp"
+            android:padding="20dp"
+            />
+
+        <!-- Button 2 -->
+        <Button
+            android:id="@+id/button50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_to_cart"
+            android:backgroundTint="@color/yellow"
+            android:layout_marginHorizontal="60dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+
+        <!--      Line-3-->
+        <TextView
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/line"
+            android:layout_marginTop="20dp"/>
+        <!--      Price-3-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_70"
+            android:layout_gravity="center"
+            android:textSize="40sp"
+            android:paddingTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <!-- ImageView 3 -->
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/rupees_70"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="30dp"/>
+
+        <!-- Spinner 3 -->
+        <Spinner
+            android:id="@+id/spinner3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginVertical="10dp"
+            android:padding="20dp"/>
+
+        <!-- Button 3 -->
+        <Button
+            android:id="@+id/button70"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:backgroundTint="@color/yellow"
+            android:text="@string/add_to_cart"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginHorizontal="60dp"
+            />
+
+        <!--      Line-4-->
+        <TextView
+            android:id="@+id/line4"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/line"
+            android:layout_marginTop="20dp"/>
+        <!--      Price-3-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_80"
+            android:layout_gravity="center"
+            android:textSize="40sp"
+            android:paddingTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <!-- ImageView 4 -->
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/rupees_80"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="20dp"/>
+
+        <!-- Spinner 4 -->
+        <Spinner
+            android:id="@+id/spinner4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginVertical="10dp"
+            android:padding="20dp"/>
+
+        <!-- Button 4 -->
+        <Button
+            android:id="@+id/button80"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_to_cart"
+            android:layout_marginHorizontal="60dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:backgroundTint="@color/yellow"
+            android:padding="10dp"/>
+
+        <!--      Line-5-->
+        <TextView
+            android:id="@+id/line5"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/line"
+            android:layout_marginTop="20dp"/>
+        <!--      Price-5-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_500"
+            android:layout_gravity="center"
+            android:textSize="40sp"
+            android:paddingTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <!-- ImageView 5 -->
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/rupees_500"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="30dp"/>
+
+        <!-- Spinner 5 -->
+        <Spinner
+            android:id="@+id/spinner5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="60dp"
+            android:padding="20dp"/>
+
+        <!-- Button 5 -->
+        <Button
+            android:id="@+id/button500"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_to_cart"
+            android:backgroundTint="@color/yellow"
+            android:textSize="20sp"
+            android:layout_marginHorizontal="60dp"/>
+        <!--      Line-6-->
+        <TextView
+            android:id="@+id/line6"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/line"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+</ScrollView>

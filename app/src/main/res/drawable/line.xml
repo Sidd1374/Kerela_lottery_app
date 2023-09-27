@@ -4,9 +4,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aapt="http://schemas.android.com/aapt"
     android:width="220dp"
-    android:height="0.1dp"
-    android:viewportWidth="314"
-    android:viewportHeight="0.1"
+    android:height="1dp"
+    android:viewportWidth="200"
+    android:viewportHeight="1"
     >
     <group>
         <clip-path

@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         Email_lgn = findViewById(R.id.LoginNum);  // Email EditText
         sign_pg = findViewById(R.id.textView4); // Sign Up TextView
         lgn_btn = findViewById(R.id.button);     // Login Button
+        String accid = Email_lgn.getText().toString();
+
 
         // Set a click listener for the Login button
         lgn_btn.setOnClickListener(new View.OnClickListener() {
