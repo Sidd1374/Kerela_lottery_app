@@ -1,7 +1,9 @@
 package com.example.keralalottery;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -72,5 +74,19 @@ public class Activity2 extends AppCompatActivity {
             }
         });
 
+        btnLogout = findViewById(R.id.logOutBtn);
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an intent to share your app's link
+                Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                shareIntent.setType("text/plain");
+                shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Share App"); // Subject of the message
+                shareIntent.putExtra(Intent.EXTRA_TEXT, "Check out this amazing app: [Your App Link]"); // Content of the message
+
+                // Start the sharing activity
+                startActivity(Intent.createChooser(shareIntent, "Share via"));
+            }
+        });
     }
 }

@@ -47,11 +47,9 @@ public class navigation_profile extends Fragment {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     // Assuming the "aryan" child exists in your database
-
                     if (snapshot.getValue() != null) {
                         String name1 = snapshot.child("email").getValue(String.class);
                         String username = snapshot.child("name").getValue(String.class);
-
                         name.setText(username);
                         email.setText(name1);
                     } else {
@@ -59,7 +57,6 @@ public class navigation_profile extends Fragment {
                         name.setText("Data not found");
                         email.setText("Email not found");
                     }
-
                 }
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {

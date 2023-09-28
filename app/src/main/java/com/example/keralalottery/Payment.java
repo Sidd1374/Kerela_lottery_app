@@ -30,12 +30,11 @@ public class Payment extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         send = findViewById(R.id.buyNow);
-        amountEt = findViewById(R.id.lotteryPrize);
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Getting the values from the EditTexts
-                String amount = amountEt.getText().toString();
+                String amount = "100";
                 String note = "lottery Ticket ";
                 String upiId = "9034106135@ybl";
                 payUsingUpi(amount, upiId, note);

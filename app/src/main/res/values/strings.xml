@@ -32,7 +32,16 @@ or any other special offers. Only purchase lottery tickets from your trusted age
     <string name="_70">₹70</string>
     <string name="_500">₹500</string>
     <string name="_80">₹80</string>
-
+    <string name="no_upi">No UPI app found, please install one to continue</string>
+    <string name="_50_lottery">₹50 Lottery -</string>
+    <string name="_70_lottery">₹70 Lottery -</string>
+    <string name="_80_lottery">₹80 Lottery -</string>
+    <string name="_500_lottery">₹500 Lottery -</string>
+    <string name="_0"><i>0</i></string>
+    <string name="amount">Amount :</string>
+    <string name="convinience_fee">Convenience Fee :</string>
+    <string name="total">Total :</string>
+    <string name="_10_lottery">₹10 Lottery -</string>
 
 
 </resources>
