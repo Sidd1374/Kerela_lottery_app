@@ -104,6 +104,18 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7"
         tools:layout_editor_absoluteX="0dp" />
 
+
+    <ListView
+        android:layout_width="404dp"
+        android:layout_height="451dp"
+        android:id="@+id/listTickets"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView9"
+        app:layout_constraintVertical_bias="0.958" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

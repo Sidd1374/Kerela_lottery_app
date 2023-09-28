@@ -10,13 +10,24 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.util.Random;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
+    FirebaseDatabase db=FirebaseDatabase.getInstance();
+    DatabaseReference reference= db.getReference("Ticket-Final");
     EditText Pwd_lgn, Email_lgn;
     Button lgn_btn;
     TextView sign_pg;
@@ -24,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         auth = FirebaseAuth.getInstance();   // auth obj
@@ -42,16 +54,55 @@ public class MainActivity extends AppCompatActivity {
                 String pwd_lgn = Pwd_lgn.getText().toString();
                 String email_id = Email_lgn.getText().toString();
 
-                if (TextUtils.isEmpty(email_id) || TextUtils.isEmpty(pwd_lgn)){
+                if (TextUtils.isEmpty(email_id) || TextUtils.isEmpty(pwd_lgn)) {
                     Toast.makeText(MainActivity.this, "Empty Credentials!", Toast.LENGTH_SHORT).show();
                 } else {
-                    loginUser(email_id , pwd_lgn);
+                    loginUser(email_id, pwd_lgn);
                 }
 
-                // Check for the Username in the Database
-                // You can add your database checking logic here
-
+//                int[] uniqueRandomNumbers = new int[1000]; // Change the size as needed
+//
+//                // Create a Random object to generate random numbers
+//                Random random = new Random();
+//
+//                // Generate and store unique random numbers
+//                int count = 0;
+//                while (count < uniqueRandomNumbers.length) {
+//                    int randomNumber = random.nextInt(900000) + 100000; // Generate 6-digit random number
+//
+//                    // Check if the generated number is unique
+//                    boolean isUnique = true;
+//                    for (int i = 0; i < count; i++) {
+//                        if (uniqueRandomNumbers[i] == randomNumber) {
+//                            isUnique = false;
+//                            break;
+//                        }
+//                    }
+//
+//                    // If the number is unique, add it to the array
+//                    if (isUnique) {
+//                        uniqueRandomNumbers[count] = randomNumber;
+//                        count++;
+//                    }
+//                }
+//
+//                // Print the unique random numbers
+//                System.out.println("Unique Random Numbers:");
+//                for (int num : uniqueRandomNumbers) {
+//                    reference.child(String.valueOf(num)).setValue(num);
+//                }
+//
+//
+//                // Check for the Username in the Database
+//                // You can add your database checking logic here
+//
+//
+//                // Define the array to store unique random numbers
+//
+//
+//            }
             }
+
         });
 
         // Function to Move to Sign in Window

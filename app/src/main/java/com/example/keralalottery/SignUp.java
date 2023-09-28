@@ -42,18 +42,18 @@ public class SignUp extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         pd = new ProgressDialog(this);
         signUpBtn = findViewById(R.id.signUpBtn);
+
         db = FirebaseDatabase.getInstance();
-        String emailStr = email.getText().toString();
         mobNo = findViewById(R.id.inputPhno);
 
         signUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 String name = inName.getText().toString();
-                 String emailStr = email.getText().toString();
-                 String inPwd = pwd.getText().toString();
-                 String inPwdCfm = pwdCfm.getText().toString();
-                 String ph_no = mobNo.getText().toString();
+                String name = inName.getText().toString();
+                String emailStr = email.getText().toString();
+                String inPwd = pwd.getText().toString();
+                String inPwdCfm = pwdCfm.getText().toString();
+                String ph_no = mobNo.getText().toString();
 
                 if (TextUtils.isEmpty(name) || TextUtils.isEmpty(emailStr)
                         || TextUtils.isEmpty(inPwd) || TextUtils.isEmpty(inPwdCfm)){
@@ -84,15 +84,18 @@ public class SignUp extends AppCompatActivity {
 //                    FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
 //                    if (currentUser != null) {
 //                        String userEmail = currentUser.getEmail();
-                        HashMap<String, Object> map = new HashMap<>();
-                        map.put("name", name);
-                        map.put("email", email);
-                        map.put("phNum", phno);
-                        map.put("pwd",password);
+//                        HashMap<String, Object> map = new HashMap<>();
+//                        map.put("name", name);
+//                        map.put("email", email);
+//                        map.put("phNum", phno);
+//                        map.put("pwd",password);
 
-                        String[] mainStr = email.split("@");
-                        String emailStr = mainStr[0];
-                        db.getReference().child("keralaLottery").child("userDetails").child(emailStr).updateChildren(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    Users newUser=new Users(name,email,phno,password);
+//                        int userDtl = Integer.parseInt(phno);
+
+                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+                    db.getReference().child("keralaLottery").child("userDetails").child(user.getUid()).setValue(newUser).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 if(task.isSuccessful()){

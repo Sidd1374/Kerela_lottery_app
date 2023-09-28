@@ -21,6 +21,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.Task;
+
 import java.util.ArrayList;
 
 public class navigation_cart extends Fragment {
@@ -81,7 +83,7 @@ public class navigation_cart extends Fragment {
                 //Getting the values from the EditTexts
                 String amount = amnt;
                 String note = "Kerala Lottery - Purchased lottery Ticket ";
-                String upiId = "9034106135@ybl";
+                String upiId = "sahilwadhwa06@okhdfcbank";
                 payUsingUpi(amount, upiId, note);
             }
         });
@@ -109,6 +111,7 @@ public class navigation_cart extends Fragment {
         // check if intent resolves
         if(null != chooser.resolveActivity(getContext().getPackageManager())) {
             startActivityForResult(chooser, UPI_PAYMENT);
+
         } else {
             Toast.makeText(getContext(),getString(R.string.no_upi),Toast.LENGTH_SHORT).show();
         }
@@ -158,9 +161,11 @@ public class navigation_cart extends Fragment {
                 if(equalStr.length >= 2) {
                     if (equalStr[0].toLowerCase().equals("Status".toLowerCase())) {
                         status = equalStr[1].toLowerCase();
+                        Toast.makeText(getContext(),"Case 3",Toast.LENGTH_SHORT).show();
                     }
                     else if (equalStr[0].toLowerCase().equals("ApprovalRefNo".toLowerCase()) || equalStr[0].toLowerCase().equals("txnRef".toLowerCase())) {
                         approvalRefNo = equalStr[1];
+                        Toast.makeText(getContext(),"Case 2",Toast.LENGTH_SHORT).show();
                     }
                 }
                 else {

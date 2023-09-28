@@ -29,5 +29,4 @@ public class setData {
     public void arrayNum(){
         System.out.println("data ");
     }
-
 }

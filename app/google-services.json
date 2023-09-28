@@ -1,13 +1,14 @@
 {
   "project_info": {
-    "project_number": "373916325590",
-    "project_id": "kerala-lottery-d00ea",
-    "storage_bucket": "kerala-lottery-d00ea.appspot.com"
+    "project_number": "659965554345",
+    "firebase_url": "https://kerala-lottery-94d91-default-rtdb.firebaseio.com",
+    "project_id": "kerala-lottery-94d91",
+    "storage_bucket": "kerala-lottery-94d91.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:373916325590:android:cf521d759cb6875c3c1b77",
+        "mobilesdk_app_id": "1:659965554345:android:195cbda788229ff62583b8",
         "android_client_info": {
           "package_name": "com.example.keralalottery"
         }
@@ -15,7 +16,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCCx7XP91twfok7sbknJF1hEbimNQy0e00"
+          "current_key": "AIzaSyDPxxwNbI9ivuzQazkwfkB8SPfdoFPxzbY"
         }
       ],
       "services": {
