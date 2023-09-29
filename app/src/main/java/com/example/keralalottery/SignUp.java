@@ -81,23 +81,14 @@ public class SignUp extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-//                    FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
-//                    if (currentUser != null) {
-//                        String userEmail = currentUser.getEmail();
-//                        HashMap<String, Object> map = new HashMap<>();
-//                        map.put("name", name);
-//                        map.put("email", email);
-//                        map.put("phNum", phno);
-//                        map.put("pwd",password);
-
                     Users newUser=new Users(name,email,phno,password);
-//                        int userDtl = Integer.parseInt(phno);
 
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
                     db.getReference().child("keralaLottery").child("userDetails").child(user.getUid()).setValue(newUser).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
+                                db.getReference().child("keralaLottery").child("user phone numbers").child(name).setValue(phno);
                                 if(task.isSuccessful()){
                                     Toast.makeText(SignUp.this, "User Registered", Toast.LENGTH_SHORT).show();
                                     startActivity(new Intent(SignUp.this, MainActivity.class));
